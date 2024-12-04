@@ -1,0 +1,10 @@
+{% extends 'forms/base.html' %}
+
+{% block content %}
+  <h1>Опросы</h1>
+  <ul>
+    {% for poll in polls %}
+      <li><a href="{% url 'form' poll.id %}">{{ poll.question }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
